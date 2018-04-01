@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>字符串常见操作</title>
+</head>
+<body>
+</body>
+<script type="text/javascript">
+	var str = "aasdaasdadssadssdds";
+	var obj = {};
+	var arr = [];
+	var letter;
+	for(var i = 0,len = str.length;i<len;i++){
+		letter = str[i];
+		if(!obj[letter]){
+			obj[letter] = 1;
+		}else{
+			obj[letter]++;
+		}
+	}
+	var max_key,max_num = 0;
+	for(key in obj){
+		if(max_num < obj[key]){
+			max_num = obj[key];
+			max_key = key;
+		}
+	}
+	//console.log("字母：" + max_key + "次数：" + max_num);
+</script>
+</html>
